@@ -1,0 +1,282 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: blue;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .majorEnabled {
+    transition: opacity 0.4s ease;
+}
+
+#minorKey {
+    transition: opacity 0.4s ease;
+} */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0352fc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 34px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.svgLine {
+    stroke: blue;
+    stroke-width: 2;
+}
+
+.centre {
+    display: flex;
+    visibility: hidden;
+}
+
+.arm {
+    position: absolute;
+    visibility: hidden;
+    border: 2px solid red;
+    transform-origin: left;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.note-arm {
+    width: 175px;
+}
+
+.connector {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+    left: 100%;
+    top: -1px;
+    width: 1px;
+    height: 1px;
+    background-color: green;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.connector.chordNote {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  left: 160px;
+  top: -15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  color: blue;
+  border: solid 1px blue;
+  visibility: visible;
+  z-index: 1;
+}
+
+.label1-arm {
+    width: 280px;
+}
+
+.innerLabel-arm {
+    width: 300px;
+}
+
+.bubble {
+    display: flex;
+    position: absolute;
+    visibility: visible;
+    border: none;
+    background-color: #0352fc;
+    /* background-image: linear-gradient(#0352fc,#0025 5%);  */
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+    white-space: pre;
+}
+
+.bubble .text, li span {
+  pointer-events: none;
+}
+
+.note.bubble[data-position="0"] {
+    background-color: darkgreen;
+}
+
+.fade {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+}
+
+.unfade {
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.note {
+    left: 100%;
+    top: -35px;
+    height: 70px;
+    width: 70px;
+    border: none;
+    cursor: pointer;
+}
+
+.label1 {
+    left: 235px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: black;
+}
+
+.label {
+    left: 255px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+#contextMenu, #contextSubmenu {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #e0e0e0;
+  color: darkblue;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+#contextMenu ul, #contextSubmenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contextMenu li, #contextSubmenu li {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#contextMenu li:hover, #contextSubmenu li:hover {
+  color: #0352fc;
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+
+.context-shortcut {
+  margin-right: 10px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.context-text {
+  margin-right: 10px;
+  flex: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.context-suffix {
+  flex: 20px;
+}
+
+

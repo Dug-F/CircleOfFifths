@@ -1,0 +1,12 @@
+{
+  "name": "day_023",
+  "version": "1.0.0",
+  "description": "- Start to introduce better data structures to support the 'logic' of the app\r - Encode the notes of each scale and their interals and roles\r - To allow correct resolution of enharmonic equivalents when a scale is shown\r - And also to lay the foundation for correct building of context menus for each interval, e.g. whether to show a major, minor, dominant chord etc.\r - Amend the current label2 to be the innerLabel, which will represent intervals\r - Create an outerLabel, which will represent chords",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

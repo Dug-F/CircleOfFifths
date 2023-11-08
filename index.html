@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <title>Circle of Fifths</title>
+  </head>
+  <header>
+    <h1>Circle of Fifths</h1>
+    <h2 id="header"></h2>
+    <div class="header-container hidden">
+      <p id="majorKey">Relative Major</p>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <p id="minorKey" class="fade">Relative Minor</p>
+    </div>
+  </header>
+  <body>
+
+    <div id="container" class="container">
+      <svg>
+      </svg>
+      <div id="centre"></div>
+
+      <div id="contextMenu" class="hidden">
+        <ul>
+        </ul>
+      </div>
+    </div>
+
+    <div id="contextSubmenu" class="hidden">
+      <ul>
+        <li>This is a submenu item</li>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="./scripts/animations.js"></script>
+  <script type="module" src="./scripts/dataStructure.js"></script>
+  <script type="module" src="./scripts/helperFunctions.js"></script>
+  <script type="module" src="./scripts/rotations.js"></script>
+  <script type="module" src="./scripts/drawChords.js"></script>
+  <script type="module" src="./scripts/contextMenu.js"></script>
+  <script type="module" src="./scripts/createElements.js"></script>
+  <script type="module" src="./scripts/eventListeners.js"></script>
+  <script type="module" src="./scripts/scripts.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- <script src="./scripts/contextMenu.js"></script> -->
+    <script src="./scripts/toggleMajorMinor.js"></script>
+  </body>
+</html>
